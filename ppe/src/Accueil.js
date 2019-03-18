@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import('../src/scss/vendor/datatables/jquery.dataTables')
 
 class Accueil extends Component {
-
-
 
   render() {
 
@@ -17,7 +17,11 @@ class Accueil extends Component {
 
             <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-              <a class="navbar-brand mr-1" href="index.html">Noxa</a>
+              <a class="navbar-brand" >
+              
+              <Link to='/'>Noxa</Link>
+                
+              </a>
 
               <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
                 <i class="fas fa-bars"></i>
@@ -54,24 +58,26 @@ class Accueil extends Component {
 
             <div id="wrapper">
 
-
               <ul class="sidebar navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" >
+                  <Link to='/'>Accueil</Link>
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Accueil</span>
+                    
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Graphiques</span></a>
+                <a class="nav-link" >
+                <Link to='/charts'>Graphiques</Link>
+                <i class="fas fa-fw fa-table"></i>
+                </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="tables.html">
+                  <a class="nav-link" >
+                  <Link to='/tables'>Tableaux</Link>
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tableaux</span></a>
+                    </a>
                 </li>
               </ul>
 
